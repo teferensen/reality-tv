@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T21:26:19+00:00",
+ "updated": "2026-11-20T21:27:37+00:00",
  "problems": [],
  "shows": [
   {
@@ -20536,6 +20536,415 @@
    ]
   },
   {
+   "name": "Southern Hospitality",
+   "group": "Bravo",
+   "tvmaze_id": 64702,
+   "tvmaze_name": "Southern Hospitality",
+   "tvmaze_url": "https://www.tvmaze.com/shows/64702/southern-hospitality",
+   "channel": "Bravo",
+   "streaming": false,
+   "status": "Running",
+   "image": "https://static.tvmaze.com/uploads/images/medium_portrait/617/1543687.jpg",
+   "seasons": [
+    {
+     "number": 1,
+     "name": "",
+     "premiere": "2022-11-28",
+     "end": "2023-01-23",
+     "episode_order": 8,
+     "episodes": [
+      {
+       "number": 1,
+       "name": "The Republic of Leva",
+       "airdate": "2022-11-28",
+       "airstamp": "2022-11-29T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 2,
+       "name": "Clocking In… Coming Out",
+       "airdate": "2022-12-05",
+       "airstamp": "2022-12-06T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 3,
+       "name": "Toxic Tea Party",
+       "airdate": "2022-12-12",
+       "airstamp": "2022-12-13T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 4,
+       "name": "Off to the Races",
+       "airdate": "2022-12-19",
+       "airstamp": "2022-12-20T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 5,
+       "name": "Rock the Boat",
+       "airdate": "2023-01-02",
+       "airstamp": "2023-01-03T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 6,
+       "name": "Rumor Has It",
+       "airdate": "2023-01-09",
+       "airstamp": "2023-01-10T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 7,
+       "name": "Pride and Peanut Butter",
+       "airdate": "2023-01-16",
+       "airstamp": "2023-01-17T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 8,
+       "name": "Women Scorned",
+       "airdate": "2023-01-23",
+       "airstamp": "2023-01-24T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      }
+     ]
+    },
+    {
+     "number": 2,
+     "name": "",
+     "premiere": "2023-12-07",
+     "end": "2024-02-22",
+     "episode_order": 11,
+     "episodes": [
+      {
+       "number": 1,
+       "name": "When Push Comes to Shovel",
+       "airdate": "2023-12-07",
+       "airstamp": "2023-12-08T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 2,
+       "name": "Message Delivered",
+       "airdate": "2023-12-14",
+       "airstamp": "2023-12-15T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 3,
+       "name": "Once Upon a Lie",
+       "airdate": "2023-12-21",
+       "airstamp": "2023-12-22T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 4,
+       "name": "Rumor Has It",
+       "airdate": "2024-01-04",
+       "airstamp": "2024-01-05T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 5,
+       "name": "Turning the Tables",
+       "airdate": "2024-01-11",
+       "airstamp": "2024-01-12T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 6,
+       "name": "Cat's Out of the Bag",
+       "airdate": "2024-01-18",
+       "airstamp": "2024-01-19T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 7,
+       "name": "A Match Made in Miami",
+       "airdate": "2024-01-25",
+       "airstamp": "2024-01-26T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 8,
+       "name": "Hurricane Maddi",
+       "airdate": "2024-02-01",
+       "airstamp": "2024-02-02T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 9,
+       "name": "Circus Act",
+       "airdate": "2024-02-08",
+       "airstamp": "2024-02-09T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 10,
+       "name": "A Fare-Will Party",
+       "airdate": "2024-02-15",
+       "airstamp": "2024-02-16T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 11,
+       "name": "Reunion",
+       "airdate": "2024-02-22",
+       "airstamp": "2024-02-23T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      }
+     ]
+    },
+    {
+     "number": 3,
+     "name": "",
+     "premiere": "2025-01-02",
+     "end": "2025-03-06",
+     "episode_order": null,
+     "episodes": [
+      {
+       "number": 1,
+       "name": "Bottles, Balloons and Betrayal",
+       "airdate": "2025-01-02",
+       "airstamp": "2025-01-03T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 2,
+       "name": "Cash or Store Credit",
+       "airdate": "2025-01-09",
+       "airstamp": "2025-01-10T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 3,
+       "name": "Wylin at Lake Wylie",
+       "airdate": "2025-01-16",
+       "airstamp": "2025-01-17T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 4,
+       "name": "A Lake House Divided",
+       "airdate": "2025-01-23",
+       "airstamp": "2025-01-24T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 5,
+       "name": "No Call, Low Blow",
+       "airdate": "2025-01-30",
+       "airstamp": "2025-01-31T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 6,
+       "name": "Viva Las Vegas!",
+       "airdate": "2025-02-06",
+       "airstamp": "2025-02-07T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 7,
+       "name": "Not Pretty in Sin City",
+       "airdate": "2025-02-13",
+       "airstamp": "2025-02-14T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 8,
+       "name": "Wieners and Losers",
+       "airdate": "2025-02-20",
+       "airstamp": "2025-02-21T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 9,
+       "name": "Honeymoon Is Over",
+       "airdate": "2025-02-27",
+       "airstamp": "2025-02-28T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 10,
+       "name": "Guilty Until Proven Innocent",
+       "airdate": "2025-03-06",
+       "airstamp": "2025-03-07T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 11,
+       "name": "Reunion",
+       "airdate": "2025-03-06",
+       "airstamp": "2025-03-07T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      }
+     ]
+    },
+    {
+     "number": 4,
+     "name": "",
+     "premiere": "2026-03-04",
+     "end": "2026-06-10",
+     "episode_order": 13,
+     "episodes": [
+      {
+       "number": 1,
+       "name": "Wiener Wars",
+       "airdate": "2026-03-04",
+       "airstamp": "2026-03-05T02:01:00+00:00",
+       "airtime": "21:01",
+       "type": "regular"
+      },
+      {
+       "number": 2,
+       "name": "Folly Follies",
+       "airdate": "2026-03-11",
+       "airstamp": "2026-03-12T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 3,
+       "name": "An Olive Branch, Served Dirty",
+       "airdate": "2026-03-18",
+       "airstamp": "2026-03-19T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 4,
+       "name": "Giving Grace",
+       "airdate": "2026-03-25",
+       "airstamp": "2026-03-26T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 5,
+       "name": "Float Around and Find Out",
+       "airdate": "2026-04-01",
+       "airstamp": "2026-04-02T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 6,
+       "name": "Ruckus on the River",
+       "airdate": "2026-04-08",
+       "airstamp": "2026-04-09T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 7,
+       "name": "Sip Happens",
+       "airdate": "2026-04-15",
+       "airstamp": "2026-04-16T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 8,
+       "name": "My Chemical Bromance",
+       "airdate": "2026-04-22",
+       "airstamp": "2026-04-23T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 9,
+       "name": "Sun's Out, Shade's Out",
+       "airdate": "2026-04-29",
+       "airstamp": "2026-04-30T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 10,
+       "name": "You Can't Go to Church with Us",
+       "airdate": "2026-05-06",
+       "airstamp": "2026-05-07T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 11,
+       "name": "This Beach is Crazy",
+       "airdate": "2026-05-13",
+       "airstamp": "2026-05-14T01:15:00+00:00",
+       "airtime": "21:15",
+       "type": "regular"
+      },
+      {
+       "number": 12,
+       "name": "Big Gay Explosion",
+       "airdate": "2026-05-20",
+       "airstamp": "2026-05-21T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 13,
+       "name": "Mardi Gras Mayhem",
+       "airdate": "2026-05-27",
+       "airstamp": "2026-05-28T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 14,
+       "name": "Reunion Part 1",
+       "airdate": "2026-06-03",
+       "airstamp": "2026-06-04T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 15,
+       "name": "Reunion Part 2",
+       "airdate": "2026-06-10",
+       "airstamp": "2026-06-11T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "name": "Summer House",
    "group": "Bravo",
    "tvmaze_id": 23583,
@@ -21879,85 +22288,101 @@
    ]
   },
   {
-   "name": "Southern Hospitality",
+   "name": "The McBee Dynasty: Real American Cowboys",
    "group": "Bravo",
-   "tvmaze_id": 64702,
-   "tvmaze_name": "Southern Hospitality",
-   "tvmaze_url": "https://www.tvmaze.com/shows/64702/southern-hospitality",
+   "tvmaze_id": 74854,
+   "tvmaze_name": "The McBee Dynasty: Real American Cowboys",
+   "tvmaze_url": "https://www.tvmaze.com/shows/74854/the-mcbee-dynasty-real-american-cowboys",
    "channel": "Bravo",
    "streaming": false,
    "status": "Running",
-   "image": "https://static.tvmaze.com/uploads/images/medium_portrait/617/1543687.jpg",
+   "image": "https://static.tvmaze.com/uploads/images/medium_portrait/506/1266876.jpg",
    "seasons": [
     {
      "number": 1,
      "name": "",
-     "premiere": "2022-11-28",
-     "end": "2023-01-23",
-     "episode_order": 8,
+     "premiere": "2024-03-11",
+     "end": "2024-03-11",
+     "episode_order": 10,
      "episodes": [
       {
        "number": 1,
-       "name": "The Republic of Leva",
-       "airdate": "2022-11-28",
-       "airstamp": "2022-11-29T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "Family Succession",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       },
       {
        "number": 2,
-       "name": "Clocking In… Coming Out",
-       "airdate": "2022-12-05",
-       "airstamp": "2022-12-06T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "100 Million-Dollar Love Triangle",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       },
       {
        "number": 3,
-       "name": "Toxic Tea Party",
-       "airdate": "2022-12-12",
-       "airstamp": "2022-12-13T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "Busted",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       },
       {
        "number": 4,
-       "name": "Off to the Races",
-       "airdate": "2022-12-19",
-       "airstamp": "2022-12-20T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "An Ultimatum",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       },
       {
        "number": 5,
-       "name": "Rock the Boat",
-       "airdate": "2023-01-02",
-       "airstamp": "2023-01-03T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "The Wild, Wild West",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       },
       {
        "number": 6,
-       "name": "Rumor Has It",
-       "airdate": "2023-01-09",
-       "airstamp": "2023-01-10T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "Power Moves and Paying Dues",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       },
       {
        "number": 7,
-       "name": "Pride and Peanut Butter",
-       "airdate": "2023-01-16",
-       "airstamp": "2023-01-17T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "Nashville Hot",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       },
       {
        "number": 8,
-       "name": "Women Scorned",
-       "airdate": "2023-01-23",
-       "airstamp": "2023-01-24T02:00:00+00:00",
-       "airtime": "21:00",
+       "name": "The Women Strike Back",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 9,
+       "name": "Breaking Point",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 10,
+       "name": "Worst Case Scenario",
+       "airdate": "2024-03-11",
+       "airstamp": "2024-03-11T16:00:00+00:00",
+       "airtime": null,
        "type": "regular"
       }
      ]
@@ -21965,96 +22390,88 @@
     {
      "number": 2,
      "name": "",
-     "premiere": "2023-12-07",
-     "end": "2024-02-22",
-     "episode_order": 11,
+     "premiere": "2025-06-30",
+     "end": "2025-09-01",
+     "episode_order": 10,
      "episodes": [
       {
        "number": 1,
-       "name": "When Push Comes to Shovel",
-       "airdate": "2023-12-07",
-       "airstamp": "2023-12-08T02:00:00+00:00",
+       "name": "Russian Roulette",
+       "airdate": "2025-06-30",
+       "airstamp": "2025-07-01T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 2,
-       "name": "Message Delivered",
-       "airdate": "2023-12-14",
-       "airstamp": "2023-12-15T02:00:00+00:00",
+       "name": "Ditched for Dallas",
+       "airdate": "2025-07-07",
+       "airstamp": "2025-07-08T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 3,
-       "name": "Once Upon a Lie",
-       "airdate": "2023-12-21",
-       "airstamp": "2023-12-22T02:00:00+00:00",
+       "name": "The Great Chicken Massacre",
+       "airdate": "2025-07-14",
+       "airstamp": "2025-07-15T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 4,
-       "name": "Rumor Has It",
-       "airdate": "2024-01-04",
-       "airstamp": "2024-01-05T02:00:00+00:00",
+       "name": "Day Drinkin",
+       "airdate": "2025-07-21",
+       "airstamp": "2025-07-22T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 5,
-       "name": "Turning the Tables",
-       "airdate": "2024-01-11",
-       "airstamp": "2024-01-12T02:00:00+00:00",
+       "name": "Hurricane Calah",
+       "airdate": "2025-07-28",
+       "airstamp": "2025-07-29T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 6,
-       "name": "Cat's Out of the Bag",
-       "airdate": "2024-01-18",
-       "airstamp": "2024-01-19T02:00:00+00:00",
+       "name": "Never Seen a Rock So Big",
+       "airdate": "2025-08-04",
+       "airstamp": "2025-08-05T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 7,
-       "name": "A Match Made in Miami",
-       "airdate": "2024-01-25",
-       "airstamp": "2024-01-26T02:00:00+00:00",
+       "name": "Nashville Hot",
+       "airdate": "2025-08-11",
+       "airstamp": "2025-08-12T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 8,
-       "name": "Hurricane Maddi",
-       "airdate": "2024-02-01",
-       "airstamp": "2024-02-02T02:00:00+00:00",
+       "name": "Panic! On the Combine",
+       "airdate": "2025-08-18",
+       "airstamp": "2025-08-19T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 9,
-       "name": "Circus Act",
-       "airdate": "2024-02-08",
-       "airstamp": "2024-02-09T02:00:00+00:00",
+       "name": "Russian Invasion",
+       "airdate": "2025-08-25",
+       "airstamp": "2025-08-26T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
        "number": 10,
-       "name": "A Fare-Will Party",
-       "airdate": "2024-02-15",
-       "airstamp": "2024-02-16T02:00:00+00:00",
+       "name": "Wedding Bells And Jail Cells",
+       "airdate": "2025-09-01",
+       "airstamp": "2025-09-02T01:00:00+00:00",
        "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 11,
-       "name": "Reunion",
-       "airdate": "2024-02-22",
-       "airstamp": "2024-02-23T01:00:00+00:00",
-       "airtime": "20:00",
        "type": "regular"
       }
      ]
@@ -22062,224 +22479,87 @@
     {
      "number": 3,
      "name": "",
-     "premiere": "2025-01-02",
-     "end": "2025-03-06",
+     "premiere": "2026-06-15",
+     "end": "2026-08-17",
      "episode_order": null,
      "episodes": [
       {
        "number": 1,
-       "name": "Bottles, Balloons and Betrayal",
-       "airdate": "2025-01-02",
-       "airstamp": "2025-01-03T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 2,
-       "name": "Cash or Store Credit",
-       "airdate": "2025-01-09",
-       "airstamp": "2025-01-10T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 3,
-       "name": "Wylin at Lake Wylie",
-       "airdate": "2025-01-16",
-       "airstamp": "2025-01-17T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 4,
-       "name": "A Lake House Divided",
-       "airdate": "2025-01-23",
-       "airstamp": "2025-01-24T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 5,
-       "name": "No Call, Low Blow",
-       "airdate": "2025-01-30",
-       "airstamp": "2025-01-31T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 6,
-       "name": "Viva Las Vegas!",
-       "airdate": "2025-02-06",
-       "airstamp": "2025-02-07T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 7,
-       "name": "Not Pretty in Sin City",
-       "airdate": "2025-02-13",
-       "airstamp": "2025-02-14T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 8,
-       "name": "Wieners and Losers",
-       "airdate": "2025-02-20",
-       "airstamp": "2025-02-21T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 9,
-       "name": "Honeymoon Is Over",
-       "airdate": "2025-02-27",
-       "airstamp": "2025-02-28T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 10,
-       "name": "Guilty Until Proven Innocent",
-       "airdate": "2025-03-06",
-       "airstamp": "2025-03-07T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 11,
-       "name": "Reunion",
-       "airdate": "2025-03-06",
-       "airstamp": "2025-03-07T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      }
-     ]
-    },
-    {
-     "number": 4,
-     "name": "",
-     "premiere": "2026-03-04",
-     "end": "2026-06-10",
-     "episode_order": 13,
-     "episodes": [
-      {
-       "number": 1,
-       "name": "Wiener Wars",
-       "airdate": "2026-03-04",
-       "airstamp": "2026-03-05T02:01:00+00:00",
-       "airtime": "21:01",
-       "type": "regular"
-      },
-      {
-       "number": 2,
-       "name": "Folly Follies",
-       "airdate": "2026-03-11",
-       "airstamp": "2026-03-12T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 3,
-       "name": "An Olive Branch, Served Dirty",
-       "airdate": "2026-03-18",
-       "airstamp": "2026-03-19T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 4,
-       "name": "Giving Grace",
-       "airdate": "2026-03-25",
-       "airstamp": "2026-03-26T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 5,
-       "name": "Float Around and Find Out",
-       "airdate": "2026-04-01",
-       "airstamp": "2026-04-02T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 6,
-       "name": "Ruckus on the River",
-       "airdate": "2026-04-08",
-       "airstamp": "2026-04-09T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 7,
-       "name": "Sip Happens",
-       "airdate": "2026-04-15",
-       "airstamp": "2026-04-16T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 8,
-       "name": "My Chemical Bromance",
-       "airdate": "2026-04-22",
-       "airstamp": "2026-04-23T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 9,
-       "name": "Sun's Out, Shade's Out",
-       "airdate": "2026-04-29",
-       "airstamp": "2026-04-30T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 10,
-       "name": "You Can't Go to Church with Us",
-       "airdate": "2026-05-06",
-       "airstamp": "2026-05-07T01:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      },
-      {
-       "number": 11,
-       "name": "This Beach is Crazy",
-       "airdate": "2026-05-13",
-       "airstamp": "2026-05-14T01:15:00+00:00",
+       "name": "Judgement Day",
+       "airdate": "2026-06-15",
+       "airstamp": "2026-06-16T01:15:00+00:00",
        "airtime": "21:15",
        "type": "regular"
       },
       {
-       "number": 12,
-       "name": "Big Gay Explosion",
-       "airdate": "2026-05-20",
-       "airstamp": "2026-05-21T01:00:00+00:00",
+       "number": 2,
+       "name": "Night of the Living Russians",
+       "airdate": "2026-06-22",
+       "airstamp": "2026-06-23T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
-       "number": 13,
-       "name": "Mardi Gras Mayhem",
-       "airdate": "2026-05-27",
-       "airstamp": "2026-05-28T01:00:00+00:00",
+       "number": 3,
+       "name": "Cash-strapped Cash Cow",
+       "airdate": "2026-06-29",
+       "airstamp": "2026-06-30T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
-       "number": 14,
-       "name": "Reunion Part 1",
-       "airdate": "2026-06-03",
-       "airstamp": "2026-06-04T01:00:00+00:00",
+       "number": 4,
+       "name": "Love and War",
+       "airdate": "2026-07-06",
+       "airstamp": "2026-07-07T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       },
       {
-       "number": 15,
-       "name": "Reunion Part 2",
-       "airdate": "2026-06-10",
-       "airstamp": "2026-06-11T01:00:00+00:00",
+       "number": 5,
+       "name": "Business Beef",
+       "airdate": "2026-07-13",
+       "airstamp": "2026-07-14T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 6,
+       "name": "First Impressions and Final Farewells",
+       "airdate": "2026-07-20",
+       "airstamp": "2026-07-21T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 7,
+       "name": "Boiling Points",
+       "airdate": "2026-07-27",
+       "airstamp": "2026-07-28T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 8,
+       "name": "What Happens in Vegas...",
+       "airdate": "2026-08-03",
+       "airstamp": "2026-08-04T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 9,
+       "name": "Banks, Babies and Bad Blood",
+       "airdate": "2026-08-10",
+       "airstamp": "2026-08-11T01:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 10,
+       "name": "Parting Ways?",
+       "airdate": "2026-08-17",
+       "airstamp": "2026-08-18T01:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       }
