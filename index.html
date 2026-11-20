@@ -30,6 +30,16 @@
   .updated { color: var(--muted); font-size: 13px; margin-top: 4px; }
   main { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
   h2 { font-family: Georgia, serif; font-size: 22px; margin: 34px 0 12px; }
+  .group h2 { margin-bottom: 8px; }
+  .group-toggle { all: unset; cursor: pointer; display: flex; align-items: baseline; gap: 8px;
+                  width: 100%; padding: 4px 0; border-bottom: 1px solid var(--line); }
+  .group-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .group-toggle .count { font-family: system-ui, sans-serif; font-size: 14px; font-weight: 400; color: var(--muted); }
+  .group-toggle .chev { display: inline-block; width: 18px; font-size: 16px; color: var(--accent); transition: transform .15s; }
+  .group.collapsed:not(.searching) .chev { transform: rotate(-90deg); }
+  .group.collapsed:not(.searching) .grid { display: none; }
+  .group .grid { margin-top: 12px; }
+  .group.collapsed + .group h2 { margin-top: 18px; }
 
   .upcoming { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
   .up { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
@@ -157,15 +167,29 @@ function seasonState(s) {
   const future = days.filter(d => d > today);
   const start = days.length ? days.reduce((a, b) => a < b ? a : b) : s.premiere;
   const end = days.length ? days.reduce((a, b) => a > b ? a : b) : s.end;
+  const lastAired = aired.length ? aired.reduce((a, b) => a > b ? a : b) : null;
+  const daysSince = lastAired ? (parseDay(today) - parseDay(lastAired)) / 86400000 : Infinity;
   let state;
   if (!start || start > today || (!aired.length && !(s.premiere && s.premiere <= today))) state = "soon";
-  else if (future.length || (s.end && s.end >= today) || (s.episode_order && s.episodes.length < s.episode_order)) state = "live";
+  // Airing = more episodes are scheduled, or an episode aired in the last 2 weeks and the season
+  // isn't marked finished. Stale episode counts or end dates on old seasons no longer count.
+  else if (future.length) state = "live";
+  else if (daysSince <= 14 && ((s.end && s.end >= today) || (s.episode_order && s.episodes.length < s.episode_order))) state = "live";
   else state = "past";
   return { state, start, end };
 }
 
-function showSummary(show) {
+// Only the most recent season that has started can be airing; anything older is finished.
+function showSeasons(show) {
   const seasons = show.seasons.map(s => ({ ...s, ...seasonState(s) }));
+  let latestStarted = -1;
+  seasons.forEach((s, i) => { if (s.state !== "soon") latestStarted = i; });
+  seasons.forEach((s, i) => { if (s.state === "live" && i < latestStarted) s.state = "past"; });
+  return seasons;
+}
+
+function showSummary(show) {
+  const seasons = showSeasons(show);
   const eps = show.seasons.flatMap(s => s.episodes.map(e => ({ ...e, season: s.number })));
   const next = eps.filter(e => epLocalDay(e) && epLocalDay(e) >= today)
                   .sort((a, b) => (a.airstamp || a.airdate).localeCompare(b.airstamp || b.airdate))[0];
@@ -258,7 +282,11 @@ function render(data) {
   const rank = { live: 0, soon: 1, past: 2 };
   document.getElementById("groups").innerHTML = groups.map(g => {
     const shows = [...g.shows].sort((a, b) => rank[sums.get(a).filter] - rank[sums.get(b).filter]);
-    return `<section class="group"><h2>${esc(g.name)}</h2><div class="grid">${shows.map(s => showHTML(s, sums.get(s))).join("")}</div></section>`;
+    const isCollapsed = collapsed.has(g.name);
+    return `<section class="group${isCollapsed ? " collapsed" : ""}" data-group="${esc(g.name)}">
+      <h2><button type="button" class="group-toggle" aria-expanded="${!isCollapsed}">
+        <span class="chev" aria-hidden="true">▾</span>${esc(g.name)} <span class="count"></span></button></h2>
+      <div class="grid">${shows.map(s => showHTML(s, sums.get(s))).join("")}</div></section>`;
   }).join("") + (data.problems && data.problems.length
     ? `<p class="empty" style="margin-top:30px;font-size:13px">Couldn’t update: ${data.problems.map(esc).join("; ")}. See the README for fixing a match.</p>` : "");
 
@@ -279,14 +307,31 @@ let filter = "all";
 function applyFilter() {
   const q = document.getElementById("q").value.trim().toLowerCase();
   document.querySelectorAll(".group").forEach(g => {
-    let any = false;
+    let n = 0;
     g.querySelectorAll(".show").forEach(card => {
       const ok = (filter === "all" || card.dataset.filter === filter) && (!q || card.dataset.name.includes(q));
-      card.hidden = !ok; any ||= ok;
+      card.hidden = !ok; if (ok) n++;
     });
-    g.hidden = !any;
+    g.hidden = !n;
+    g.querySelector(".count").textContent = `(${n})`;
+    // While searching, open collapsed sections so matches aren't hidden
+    g.classList.toggle("searching", !!q);
   });
 }
+
+// Collapsed sections are remembered per browser
+const COLLAPSE_KEY = "collapsedGroups";
+let collapsed = new Set();
+try { collapsed = new Set(JSON.parse(localStorage.getItem(COLLAPSE_KEY) || "[]")); } catch (e) {}
+document.getElementById("groups").addEventListener("click", e => {
+  const btn = e.target.closest(".group-toggle");
+  if (!btn) return;
+  const sec = btn.closest(".group");
+  const nowCollapsed = sec.classList.toggle("collapsed");
+  btn.setAttribute("aria-expanded", !nowCollapsed);
+  nowCollapsed ? collapsed.add(sec.dataset.group) : collapsed.delete(sec.dataset.group);
+  try { localStorage.setItem(COLLAPSE_KEY, JSON.stringify([...collapsed])); } catch (e) {}
+});
 document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
   filter = c.dataset.filter;
   document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
