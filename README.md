@@ -10,7 +10,7 @@ A free website that shows past, current and upcoming seasons of your reality sho
    - If the `.github` folder doesn't upload, create the file by hand: **Add file → Create new file**, type `.github/workflows/update.yml` as the name, paste in the contents of that file, and commit.
 4. **Turn on Pages.** Go to **Settings → Pages**. Under **Build and deployment → Source**, choose **GitHub Actions**.
 5. **Run it for the first time.** Go to the **Actions** tab. If GitHub asks, click to enable workflows. Pick **Update air dates** → **Run workflow**. Wait about a minute until it shows a green check.
-6. **Visit your site** at `https://YOUR-USERNAME.github.io/reality-tv/`. The link also appears in **Settings → Pages**.
+6. **Visit your site** at `https://teferensen.github.io/reality-tv/`. The link also appears in **Settings → Pages**.
 
 After that, it updates itself every morning.
 
