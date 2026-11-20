@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T21:36:38+00:00",
+ "updated": "2026-11-20T21:39:32+00:00",
  "problems": [],
  "shows": [
   {
@@ -43486,6 +43486,92 @@
        "name": "The Book of Destruction",
        "airdate": "2026-09-10",
        "airstamp": "2026-09-10T16:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "The Secret Lives of Mormon Wives: Orange County",
+   "group": "Hulu",
+   "tvmaze_id": 94768,
+   "tvmaze_name": "The Secret Lives of Mormon Wives: Orange County",
+   "tvmaze_url": "https://www.tvmaze.com/shows/94768/the-secret-lives-of-mormon-wives-orange-county",
+   "channel": "Hulu",
+   "streaming": true,
+   "status": "Running",
+   "image": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1617311.jpg",
+   "seasons": [
+    {
+     "number": 1,
+     "name": "",
+     "premiere": "2026-11-12",
+     "end": "2026-11-12",
+     "episode_order": 8,
+     "episodes": [
+      {
+       "number": 1,
+       "name": "The Book of Mormons?",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 2,
+       "name": "The Book of Psalm Springs",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 3,
+       "name": "The Book of Plastics",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 4,
+       "name": "The Book of Loyalty",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 5,
+       "name": "The Book of Uncoupling",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 6,
+       "name": "The Book of Déjà Vu",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 7,
+       "name": "The Book of Control",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
+       "airtime": null,
+       "type": "regular"
+      },
+      {
+       "number": 8,
+       "name": "The Book of Ashleigh Madison",
+       "airdate": "2026-11-12",
+       "airstamp": "2026-11-12T17:00:00+00:00",
        "airtime": null,
        "type": "regular"
       }
