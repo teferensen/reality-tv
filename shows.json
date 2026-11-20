@@ -21,15 +21,28 @@
     { "group": "Bravo", "name": "The McBee Dynasty: Real American Cowboys", "country": "US" },
     { "group": "Bravo", "name": "Top Chef", "country": "US" },
     { "group": "Bravo", "name": "Vanderpump Rules", "country": "US" },
-    
+
+    { "group": "TLC", "name": "90 Day Fiancé", "country": "US" },
+    { "group": "TLC", "name": "90 Day Fiancé: The Other Way", "country": "US" },
+
     { "group": "Below Deck", "name": "Below Deck", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Mediterranean", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Sailing Yacht", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Down Under", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Adventure", "country": "US" },
 
+    { "group": "Gordon Ramsay", "name": "Hell's Kitchen", "country": "US" },
+    { "group": "Gordon Ramsay", "name": "MasterChef", "country": "US" },
+    { "group": "Gordon Ramsay", "name": "Next Level Chef", "country": "US" },
+    { "group": "Gordon Ramsay", "name": "Kitchen Nightmares", "country": "US" },
+
     { "group": "Hulu", "name": "The Secret Lives of Mormon Wives", "country": "US" },
 
-    { "group": "Peacock", "name": "The Traitors", "country": "US" }
+    { "group": "Peacock", "name": "The Traitors", "country": "US" },
+    { "group": "Peacock", "name": "Love Island", "country": "US" },
+    { "group": "Peacock", "name": "Married at First Sight", "country": "US" },
+
+    { "group": "Paramount+", "name": "Ink Master", "country": "US" },
+    { "group": "Paramount+", "name": "RuPaul's Drag Race", "country": "US" }
   ]
 }
