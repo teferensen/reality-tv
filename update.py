@@ -112,6 +112,7 @@ def build_show(entry, show_id):
             "name": ep.get("name"),
             "airdate": ep.get("airdate") or None,
             "airstamp": ep.get("airstamp"),
+            "airtime": ep.get("airtime") or None,  # time as listed by the network, e.g. "20:00"
             "type": ep.get("type"),
         })
     seasons = []
@@ -135,6 +136,9 @@ def build_show(entry, show_id):
         "tvmaze_name": show.get("name"),
         "tvmaze_url": show.get("url"),
         "channel": channel_name(show),
+        # Streaming-only (Peacock, Hulu...) releases at one moment everywhere; TV channels
+        # air at the same clock time on each coast.
+        "streaming": not show.get("network") and bool(show.get("webChannel")),
         "status": show.get("status"),
         "image": image,
         "seasons": seasons,
