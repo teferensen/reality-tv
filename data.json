@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T01:48:32+00:00",
+ "updated": "2026-11-20T20:32:37+00:00",
  "problems": [],
  "shows": [
   {
@@ -16474,7 +16474,7 @@
      "number": 11,
      "name": "",
      "premiere": "2026-10-11",
-     "end": "2026-11-29",
+     "end": "2026-12-06",
      "episode_order": null,
      "episodes": [
       {
@@ -16535,9 +16535,17 @@
       },
       {
        "number": 8,
-       "name": "TBA",
+       "name": "Surprise Surprise",
        "airdate": "2026-11-29",
        "airstamp": "2026-11-30T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 9,
+       "name": "Sorori-Tea! FUN",
+       "airdate": "2026-12-06",
+       "airstamp": "2026-12-07T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
@@ -28180,8 +28188,8 @@
    "tvmaze_id": 58177,
    "tvmaze_name": "The Traitors",
    "tvmaze_url": "https://www.tvmaze.com/shows/58177/the-traitors",
-   "channel": "NBC",
-   "streaming": false,
+   "channel": "Peacock",
+   "streaming": true,
    "status": "Running",
    "image": "https://static.tvmaze.com/uploads/images/medium_portrait/643/1607830.jpg",
    "seasons": [
@@ -28809,7 +28817,7 @@
     },
     {
      "number": 7,
-     "name": "",
+     "name": "New Blood",
      "premiere": null,
      "end": null,
      "episode_order": null,
