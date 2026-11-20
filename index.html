@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reality TV Air Dates</title>
+<style>
+  :root {
+    --bg: #faf7f2; --card: #ffffff; --ink: #1d1a17; --muted: #6f675e; --line: #e8e1d6;
+    --accent: #b5476b; --accent-soft: #f6e3ea;
+    --live: #1f7a4d; --live-soft: #e2f3ea;
+    --soon: #9a6400; --soon-soft: #fbefd7;
+    --past: #6f675e; --past-soft: #efebe4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161412; --card: #201d1a; --ink: #f1ece5; --muted: #a59c91; --line: #34302b;
+      --accent: #e57fa0; --accent-soft: #3a2530;
+      --live: #6fd3a0; --live-soft: #1b3428;
+      --soon: #f0bd63; --soon-soft: #3a2f1a;
+      --past: #a59c91; --past-soft: #2b2824;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 36px 20px 8px; max-width: 1100px; margin: 0 auto; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 34px; margin: 0; letter-spacing: -0.5px; }
+  h1 span { color: var(--accent); font-style: italic; }
+  .updated { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
+  h2 { font-family: Georgia, serif; font-size: 22px; margin: 34px 0 12px; }
+
+  .upcoming { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+  .up { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  .up .when { font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .4px; }
+  .up .what { font-weight: 600; }
+  .up .sub { color: var(--muted); font-size: 13px; }
+  .empty { color: var(--muted); font-style: italic; }
+  .swipe-hint { display: none; color: var(--muted); font-size: 12px; margin: -6px 0 8px; }
+  @media (max-width: 640px) {
+    header { padding-top: 24px; }
+    h1 { font-size: 28px; }
+    /* Coming up becomes a horizontal swipe row, with the next card peeking in */
+    .upcoming { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px;
+                margin: 0 -20px; padding: 0 20px 6px; scrollbar-width: none; }
+    .upcoming::-webkit-scrollbar { display: none; }
+    .up { flex: 0 0 78%; scroll-snap-align: start; scroll-margin-left: 20px; }
+    .swipe-hint { display: block; }
+    .grid { grid-template-columns: 1fr; }
+  }
+  [hidden] { display: none !important; }
+  ol.eps li.extra { display: none; }
+  ol.eps.expanded li.extra { display: grid; }
+  .eps-toggle { background: none; border: 0; color: var(--accent); font: inherit; font-size: 13px;
+                cursor: pointer; padding: 0 12px 10px; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 26px; }
+  .chip { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
+          padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  input[type=search] { flex: 1; min-width: 180px; border: 1px solid var(--line); background: var(--card);
+          color: var(--ink); border-radius: 999px; padding: 7px 14px; font: inherit; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; }
+  .show { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .show-head { display: flex; gap: 12px; padding: 12px; align-items: center; }
+  .show-head img { width: 54px; height: 76px; object-fit: cover; border-radius: 6px; background: var(--past-soft); flex: none; }
+  .show-head .ph { width: 54px; height: 76px; border-radius: 6px; background: var(--accent-soft); flex: none; }
+  .show-title { font-weight: 650; line-height: 1.25; }
+  .show-title a { color: inherit; text-decoration: none; }
+  .show-title a:hover { text-decoration: underline; }
+  .channel { color: var(--muted); font-size: 13px; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 999px; margin-top: 4px; }
+  .pill.live { background: var(--live-soft); color: var(--live); }
+  .pill.soon { background: var(--soon-soft); color: var(--soon); }
+  .pill.past { background: var(--past-soft); color: var(--past); }
+  .note { font-size: 12px; color: var(--soon); padding: 0 12px 8px; }
+
+  details.season { border-top: 1px solid var(--line); }
+  details.season summary { list-style: none; cursor: pointer; display: grid;
+          grid-template-columns: 74px 1fr auto; gap: 8px; align-items: center; padding: 8px 12px; font-size: 14px; }
+  details.season summary::-webkit-details-marker { display: none; }
+  details.season summary:hover { background: var(--bg); }
+  .sname { font-weight: 600; }
+  .sdates { color: var(--muted); font-size: 13px; }
+  .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
+  .tag.live { color: var(--live); } .tag.soon { color: var(--soon); } .tag.past { color: var(--past); }
+  ol.eps { margin: 0; padding: 4px 12px 10px 12px; list-style: none; font-size: 13px; }
+  ol.eps li { display: grid; grid-template-columns: 34px 1fr auto; gap: 8px; padding: 3px 0; border-bottom: 1px dashed var(--line); }
+  ol.eps li:last-child { border-bottom: 0; }
+  ol.eps li.future { color: var(--muted); }
+  ol.eps li.next { color: var(--accent); font-weight: 600; }
+  .more { padding: 6px 12px 10px; }
+  .more button { background: none; border: 0; color: var(--accent); font: inherit; font-size: 13px; cursor: pointer; padding: 0; }
+  footer { color: var(--muted); font-size: 12px; text-align: center; padding: 20px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Reality TV <span>Air Dates</span></h1>
+  <div class="updated" id="updated">Loading…</div>
+</header>
+<main>
+  <h2>Coming up</h2>
+  <div class="swipe-hint" id="swipe-hint">Swipe for more →</div>
+  <div class="upcoming" id="upcoming"></div>
+
+  <div class="controls">
+    <button class="chip" data-filter="all" aria-pressed="true">All shows</button>
+    <button class="chip" data-filter="live" aria-pressed="false">Airing now</button>
+    <button class="chip" data-filter="soon" aria-pressed="false">Upcoming</button>
+    <input type="search" id="q" placeholder="Search shows…" aria-label="Search shows">
+  </div>
+  <div id="groups"></div>
+</main>
+<footer>Schedule data from <a href="https://www.tvmaze.com/">TVmaze</a> (CC BY-SA). Times shown in your local time zone.</footer>
+
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad = n => String(n).padStart(2, "0");
+const now = new Date();
+const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+
+function parseDay(d) { const [y, m, dd] = d.split("-").map(Number); return new Date(y, m - 1, dd); }
+function fmtDate(d, opts = {}) {
+  if (!d) return "TBA";
+  const dt = parseDay(d);
+  const sameYear = dt.getFullYear() === now.getFullYear();
+  return dt.toLocaleDateString(undefined, { month: "short", day: "numeric", ...(sameYear && !opts.year ? {} : { year: "numeric" }), ...opts.extra });
+}
+function epLocalDay(ep) {
+  if (ep.airstamp) { const t = new Date(ep.airstamp); return `${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`; }
+  return ep.airdate;
+}
+function epWhen(ep) {
+  if (ep.airstamp) {
+    const t = new Date(ep.airstamp);
+    return t.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" }) + " · " +
+           t.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+  }
+  return ep.airdate ? fmtDate(ep.airdate, { extra: { weekday: "short" } }) : "TBA";
+}
+function relDays(d) {
+  const diff = Math.round((parseDay(d) - parseDay(today)) / 86400000);
+  if (diff === 0) return "Today";
+  if (diff === 1) return "Tomorrow";
+  if (diff < 7) return parseDay(d).toLocaleDateString(undefined, { weekday: "long" });
+  return fmtDate(d, { extra: { weekday: "short" } });
+}
+
+// Season state: live (airing now), soon (not started / no dates), past (finished)
+function seasonState(s) {
+  const days = s.episodes.map(epLocalDay).filter(Boolean);
+  const aired = days.filter(d => d <= today);
+  const future = days.filter(d => d > today);
+  const start = days.length ? days.reduce((a, b) => a < b ? a : b) : s.premiere;
+  const end = days.length ? days.reduce((a, b) => a > b ? a : b) : s.end;
+  let state;
+  if (!start || start > today || (!aired.length && !(s.premiere && s.premiere <= today))) state = "soon";
+  else if (future.length || (s.end && s.end >= today) || (s.episode_order && s.episodes.length < s.episode_order)) state = "live";
+  else state = "past";
+  return { state, start, end };
+}
+
+function showSummary(show) {
+  const seasons = show.seasons.map(s => ({ ...s, ...seasonState(s) }));
+  const eps = show.seasons.flatMap(s => s.episodes.map(e => ({ ...e, season: s.number })));
+  const next = eps.filter(e => epLocalDay(e) && epLocalDay(e) >= today)
+                  .sort((a, b) => (a.airstamp || a.airdate).localeCompare(b.airstamp || b.airdate))[0];
+  const live = seasons.find(s => s.state === "live");
+  const soon = seasons.find(s => s.state === "soon");
+  let pill;
+  if (live) pill = { cls: "live", text: next ? `Airing · next ${relDays(epLocalDay(next))}` : `Season ${live.number} airing` };
+  else if (soon) pill = { cls: "soon", text: soon.start ? `Season ${soon.number} premieres ${fmtDate(soon.start)}` : `Season ${soon.number} announced · date TBA` };
+  else if (show.status === "Ended") pill = { cls: "past", text: "Ended" };
+  else pill = { cls: "past", text: "Between seasons" };
+  return { seasons, next, pill, filter: live ? "live" : soon ? "soon" : "past" };
+}
+
+function seasonHTML(show, s, open) {
+  const label = { live: "Airing", soon: "Upcoming", past: "Aired" }[s.state];
+  const range = s.start ? (s.end && s.end !== s.start ? `${fmtDate(s.start, {year:true})} – ${fmtDate(s.end, {year:true})}` : fmtDate(s.start, {year:true})) : "Dates TBA";
+  const count = s.episodes.length || s.episode_order;
+  // For an airing season, show only the last aired episode and the next three; the rest sit behind a toggle
+  let nextIdx = s.episodes.findIndex(e => epLocalDay(e) && epLocalDay(e) >= today);
+  if (nextIdx < 0) nextIdx = s.episodes.length;
+  const compact = s.state === "live" && s.episodes.length > 5;
+  const lo = Math.max(0, nextIdx - 1), hi = nextIdx + 3;
+  let nextMarked = false;
+  const eps = s.episodes.map((e, i) => {
+    const d = epLocalDay(e);
+    let cls = d && d > today ? "future" : "";
+    if (!nextMarked && d && d >= today) { cls = "next"; nextMarked = true; }
+    if (compact && (i < lo || i >= hi)) cls += " extra";
+    return `<li class="${cls}"><span>${e.number ?? (e.type === "significant_special" ? "Sp" : "–")}</span><span>${esc(e.name)}</span><span>${esc(epWhen(e))}</span></li>`;
+  }).join("");
+  return `<details class="season"${open ? " open" : ""}>
+    <summary><span class="sname">Season ${esc(s.number)}</span>
+      <span class="sdates">${esc(range)}${count ? ` · ${count} ep${count == 1 ? "" : "s"}` : ""}</span>
+      <span class="tag ${s.state}">${label}</span></summary>
+    ${eps ? `<ol class="eps">${eps}</ol>${compact ? `<button type="button" class="eps-toggle">Show all ${s.episodes.length} episodes</button>` : ""}` :`<div class="more empty" style="font-size:13px">No episodes listed yet.</div>`}
+  </details>`;
+}
+
+function showHTML(show, sum) {
+  const ordered = [...sum.seasons].reverse(); // newest first
+  const shown = ordered.slice(0, 3), hidden = ordered.slice(3);
+  const openNum = (sum.seasons.find(s => s.state === "live") || {}).number;
+  const img = show.image ? `<img src="${esc(show.image)}" alt="" loading="lazy">` : `<div class="ph"></div>`;
+  return `<article class="show" data-filter="${sum.filter}" data-name="${esc(show.name.toLowerCase())}">
+    <div class="show-head">${img}<div>
+      <div class="show-title"><a href="${esc(show.tvmaze_url)}" target="_blank" rel="noopener">${esc(show.name)}</a></div>
+      <div class="channel">${esc(show.channel || "")}</div>
+      <span class="pill ${sum.pill.cls}">${esc(sum.pill.text)}</span>
+    </div></div>
+    ${show.note ? `<div class="note">⚠ ${esc(show.note)}</div>` : ""}
+    ${shown.map(s => seasonHTML(show, s, s.number === openNum)).join("")}
+    ${hidden.length ? `<div class="older" hidden>${hidden.map(s => seasonHTML(show, s, false)).join("")}</div>
+      <div class="more"><button type="button">Show ${hidden.length} older season${hidden.length === 1 ? "" : "s"}</button></div>` : ""}
+  </article>`;
+}
+
+function render(data) {
+  const upd = new Date(data.updated);
+  document.getElementById("updated").textContent = `Last updated ${upd.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}`;
+
+  const sums = new Map(data.shows.map(s => [s, showSummary(s)]));
+
+  // Coming up: next episode per show within 21 days, plus premieres within 120 days
+  const items = [];
+  for (const [show, sum] of sums) {
+    if (sum.next) {
+      const d = epLocalDay(sum.next);
+      const days = (parseDay(d) - parseDay(today)) / 86400000;
+      const isPremiere = sum.next.number === 1;
+      if (days <= 21 || (isPremiere && days <= 120)) items.push({ d, stamp: sum.next.airstamp || d, show, ep: sum.next, isPremiere });
+    } else {
+      const soon = sum.seasons.find(s => s.state === "soon" && s.start);
+      if (soon) items.push({ d: soon.start, stamp: soon.start, show, ep: null, isPremiere: true, season: soon.number });
+    }
+  }
+  items.sort((a, b) => a.stamp.localeCompare(b.stamp));
+  document.getElementById("upcoming").innerHTML = items.length ? items.map(it => `
+    <div class="up"><div class="when">${esc(relDays(it.d))}${it.isPremiere ? " · Premiere" : ""}</div>
+      <div class="what">${esc(it.show.name)}</div>
+      <div class="sub">${it.ep ? `S${esc(it.ep.season)} E${esc(it.ep.number ?? "")} · ${esc(it.ep.name)}${it.ep.airstamp ? " · " + esc(new Date(it.ep.airstamp).toLocaleTimeString(undefined, {hour: "numeric", minute: "2-digit"})) : ""}` : `Season ${esc(it.season)}`}${it.show.channel ? " · " + esc(it.show.channel) : ""}</div>
+    </div>`).join("") : `<div class="empty">Nothing scheduled in the next few weeks.</div>`;
+  if (items.length < 2) document.getElementById("swipe-hint").hidden = true;
+
+  const groups = [];
+  for (const show of data.shows) {
+    let g = groups.find(x => x.name === show.group);
+    if (!g) groups.push(g = { name: show.group, shows: [] });
+    g.shows.push(show);
+  }
+  const rank = { live: 0, soon: 1, past: 2 };
+  document.getElementById("groups").innerHTML = groups.map(g => {
+    const shows = [...g.shows].sort((a, b) => rank[sums.get(a).filter] - rank[sums.get(b).filter]);
+    return `<section class="group"><h2>${esc(g.name)}</h2><div class="grid">${shows.map(s => showHTML(s, sums.get(s))).join("")}</div></section>`;
+  }).join("") + (data.problems && data.problems.length
+    ? `<p class="empty" style="margin-top:30px;font-size:13px">Couldn’t update: ${data.problems.map(esc).join("; ")}. See the README for fixing a match.</p>` : "");
+
+  document.querySelectorAll(".eps-toggle").forEach(btn => btn.addEventListener("click", () => {
+    const list = btn.previousElementSibling;
+    const open = list.classList.toggle("expanded");
+    btn.textContent = open ? "Show fewer episodes" : `Show all ${list.children.length} episodes`;
+  }));
+
+  document.querySelectorAll(".more button").forEach(btn => btn.addEventListener("click", () => {
+    const older = btn.closest(".show").querySelector(".older");
+    older.hidden = !older.hidden;
+    btn.textContent = older.hidden ? btn.textContent.replace("Hide", "Show") : btn.textContent.replace("Show", "Hide");
+  }));
+}
+
+let filter = "all";
+function applyFilter() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  document.querySelectorAll(".group").forEach(g => {
+    let any = false;
+    g.querySelectorAll(".show").forEach(card => {
+      const ok = (filter === "all" || card.dataset.filter === filter) && (!q || card.dataset.name.includes(q));
+      card.hidden = !ok; any ||= ok;
+    });
+    g.hidden = !any;
+  });
+}
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  filter = c.dataset.filter;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+  applyFilter();
+}));
+document.getElementById("q").addEventListener("input", applyFilter);
+
+fetch("data.json", { cache: "no-cache" })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => { render(data); applyFilter(); })
+  .catch(() => {
+    document.getElementById("updated").textContent = "No schedule data yet. Run the “Update air dates” workflow on GitHub (Actions tab) to fetch it.";
+  });
+</script>
+</body>
+</html>

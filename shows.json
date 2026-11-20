@@ -1,0 +1,31 @@
+{
+  "_help": "Add or remove shows here. 'name' is searched on TVmaze. 'country' picks the right version when several exist (e.g. US vs UK Traitors). If the wrong show gets matched, find it on tvmaze.com and put its number from the URL (tvmaze.com/shows/NUMBER/...) in 'id'.",
+  "shows": [
+    { "group": "The Real Housewives", "name": "The Real Housewives of Orange County", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of New York City", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Atlanta", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of New Jersey", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of D.C.", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Beverly Hills", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Miami", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Potomac", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Dallas", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Salt Lake City", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Dubai", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives of Rhode Island", "country": "US" },
+    { "group": "The Real Housewives", "name": "The Real Housewives Ultimate Girls Trip", "country": "US" },
+
+    { "group": "Below Deck", "name": "Below Deck", "country": "US" },
+    { "group": "Below Deck", "name": "Below Deck Mediterranean", "country": "US" },
+    { "group": "Below Deck", "name": "Below Deck Sailing Yacht", "country": "US" },
+    { "group": "Below Deck", "name": "Below Deck Down Under", "country": "US" },
+    { "group": "Below Deck", "name": "Below Deck Adventure", "country": "US" },
+
+    { "group": "More shows", "name": "Vanderpump Rules", "country": "US" },
+    { "group": "More shows", "name": "Southern Charm", "country": "US" },
+    { "group": "More shows", "name": "Southern Hospitality", "country": "US" },
+    { "group": "More shows", "name": "The Secret Lives of Mormon Wives", "country": "US" },
+    { "group": "More shows", "name": "The Traitors", "country": "US" },
+    { "group": "More shows", "name": "Top Chef", "country": "US" }
+  ]
+}
