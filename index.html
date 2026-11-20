@@ -125,7 +125,7 @@
   </div>
   <div id="groups"></div>
 </main>
-<footer>Schedule data from <a href="https://www.tvmaze.com/">TVmaze</a> (CC BY-SA). Times shown in your local time zone.</footer>
+<footer>Schedule data from <a href="https://www.tvmaze.com/">TVmaze</a> (CC BY-SA). TV channel times are as listed in TV guides (same clock time on each coast); streaming release times are in your time zone.</footer>
 
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -140,17 +140,29 @@ function fmtDate(d, opts = {}) {
   const sameYear = dt.getFullYear() === now.getFullYear();
   return dt.toLocaleDateString(undefined, { month: "short", day: "numeric", ...(sameYear && !opts.year ? {} : { year: "numeric" }), ...opts.extra });
 }
+// Cable/broadcast shows (ep.broadcast = true) use the TV-listing time as-is ("8:00 PM"),
+// since the West Coast feed airs at the same clock time. Streaming releases are converted
+// to the viewer's time zone.
 function epLocalDay(ep) {
-  if (ep.airstamp) { const t = new Date(ep.airstamp); return `${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`; }
+  if (!ep.broadcast && ep.airstamp) { const t = new Date(ep.airstamp); return `${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`; }
   return ep.airdate;
 }
-function epWhen(ep) {
-  if (ep.airstamp) {
-    const t = new Date(ep.airstamp);
-    return t.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" }) + " · " +
-           t.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+function epTime(ep) {
+  if (ep.broadcast) {
+    const [h, m] = ep.airtime.split(":").map(Number);
+    return new Date(2000, 0, 1, h, m).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
   }
-  return ep.airdate ? fmtDate(ep.airdate, { extra: { weekday: "short" } }) : "TBA";
+  return ep.airstamp ? new Date(ep.airstamp).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) : "";
+}
+function epSortKey(ep) {
+  return ep.broadcast ? `${ep.airdate}T${ep.airtime}` : (ep.airstamp || ep.airdate || "");
+}
+function epWhen(ep) {
+  const d = epLocalDay(ep);
+  if (!d) return "TBA";
+  const t = epTime(ep);
+  return parseDay(d).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric",
+           ...(parseDay(d).getFullYear() === now.getFullYear() ? {} : { year: "numeric" }) }) + (t ? " · " + t : "");
 }
 function relDays(d) {
   const diff = Math.round((parseDay(d) - parseDay(today)) / 86400000);
@@ -192,7 +204,7 @@ function showSummary(show) {
   const seasons = showSeasons(show);
   const eps = show.seasons.flatMap(s => s.episodes.map(e => ({ ...e, season: s.number })));
   const next = eps.filter(e => epLocalDay(e) && epLocalDay(e) >= today)
-                  .sort((a, b) => (a.airstamp || a.airdate).localeCompare(b.airstamp || b.airdate))[0];
+                  .sort((a, b) => epSortKey(a).localeCompare(epSortKey(b)))[0];
   const live = seasons.find(s => s.state === "live");
   const soon = seasons.find(s => s.state === "soon");
   let pill;
@@ -250,6 +262,10 @@ function render(data) {
   const upd = new Date(data.updated);
   document.getElementById("updated").textContent = `Last updated ${upd.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}`;
 
+  for (const show of data.shows)
+    for (const s of show.seasons)
+      for (const e of s.episodes) e.broadcast = !show.streaming && /^\d{1,2}:\d{2}$/.test(e.airtime || "");
+
   const sums = new Map(data.shows.map(s => [s, showSummary(s)]));
 
   // Coming up: next episode per show within 21 days, plus premieres within 120 days
@@ -259,7 +275,7 @@ function render(data) {
       const d = epLocalDay(sum.next);
       const days = (parseDay(d) - parseDay(today)) / 86400000;
       const isPremiere = sum.next.number === 1;
-      if (days <= 21 || (isPremiere && days <= 120)) items.push({ d, stamp: sum.next.airstamp || d, show, ep: sum.next, isPremiere });
+      if (days <= 21 || (isPremiere && days <= 120)) items.push({ d, stamp: epSortKey(sum.next) || d, show, ep: sum.next, isPremiere });
     } else {
       const soon = sum.seasons.find(s => s.state === "soon" && s.start);
       if (soon) items.push({ d: soon.start, stamp: soon.start, show, ep: null, isPremiere: true, season: soon.number });
@@ -269,7 +285,7 @@ function render(data) {
   document.getElementById("upcoming").innerHTML = items.length ? items.map(it => `
     <div class="up"><div class="when">${esc(relDays(it.d))}${it.isPremiere ? " · Premiere" : ""}</div>
       <div class="what">${esc(it.show.name)}</div>
-      <div class="sub">${it.ep ? `S${esc(it.ep.season)} E${esc(it.ep.number ?? "")} · ${esc(it.ep.name)}${it.ep.airstamp ? " · " + esc(new Date(it.ep.airstamp).toLocaleTimeString(undefined, {hour: "numeric", minute: "2-digit"})) : ""}` : `Season ${esc(it.season)}`}${it.show.channel ? " · " + esc(it.show.channel) : ""}</div>
+      <div class="sub">${it.ep ? `S${esc(it.ep.season)} E${esc(it.ep.number ?? "")} · ${esc(it.ep.name)}${epTime(it.ep) ? " · " + esc(epTime(it.ep)) : ""}` : `Season ${esc(it.season)}`}${it.show.channel ? " · " + esc(it.show.channel) : ""}</div>
     </div>`).join("") : `<div class="empty">Nothing scheduled in the next few weeks.</div>`;
   if (items.length < 2) document.getElementById("swipe-hint").hidden = true;
 
