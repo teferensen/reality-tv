@@ -15,17 +15,20 @@
     { "group": "The Real Housewives", "name": "The Real Housewives of Rhode Island", "country": "US" },
     { "group": "The Real Housewives", "name": "The Real Housewives Ultimate Girls Trip", "country": "US" },
 
+    { "group": "Bravo", "name": "Southern Charm", "country": "US" },
+    { "group": "Bravo", "name": "Summer House", "country": "US" },
+    { "group": "Bravo", "name": "Southern Hospitality", "country": "US" },
+    { "group": "Bravo", "name": "Top Chef", "country": "US" },
+    { "group": "Bravo", "name": "Vanderpump Rules", "country": "US" },
+    
     { "group": "Below Deck", "name": "Below Deck", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Mediterranean", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Sailing Yacht", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Down Under", "country": "US" },
     { "group": "Below Deck", "name": "Below Deck Adventure", "country": "US" },
 
-    { "group": "More shows", "name": "Vanderpump Rules", "country": "US" },
-    { "group": "More shows", "name": "Southern Charm", "country": "US" },
-    { "group": "More shows", "name": "Southern Hospitality", "country": "US" },
-    { "group": "More shows", "name": "The Secret Lives of Mormon Wives", "country": "US" },
-    { "group": "More shows", "name": "The Traitors", "country": "US" },
-    { "group": "More shows", "name": "Top Chef", "country": "US" }
+    { "group": "Hulu", "name": "The Secret Lives of Mormon Wives", "country": "US" },
+
+    { "group": "Peacock", "name": "The Traitors", "country": "US" }
   ]
 }
