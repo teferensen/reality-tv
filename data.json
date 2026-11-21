@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T21:39:32+00:00",
+ "updated": "2026-11-21T19:29:38+00:00",
  "problems": [],
  "shows": [
   {
@@ -5601,7 +5601,7 @@
      "number": 16,
      "name": "",
      "premiere": "2026-09-08",
-     "end": "2026-12-01",
+     "end": "2026-12-08",
      "episode_order": null,
      "episodes": [
       {
@@ -5695,16 +5695,16 @@
       {
        "number": 12,
        "name": "TBA",
-       "airdate": "2026-11-24",
-       "airstamp": "2026-11-25T01:00:00+00:00",
+       "airdate": "2026-12-01",
+       "airstamp": "2026-12-02T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       },
       {
        "number": 13,
        "name": "TBA",
-       "airdate": "2026-12-01",
-       "airstamp": "2026-12-02T01:00:00+00:00",
+       "airdate": "2026-12-08",
+       "airstamp": "2026-12-09T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
@@ -16474,7 +16474,7 @@
      "number": 11,
      "name": "",
      "premiere": "2026-10-11",
-     "end": "2026-12-06",
+     "end": "2026-12-13",
      "episode_order": null,
      "episodes": [
       {
@@ -16546,6 +16546,14 @@
        "name": "Sorori-Tea! FUN",
        "airdate": "2026-12-06",
        "airstamp": "2026-12-07T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 10,
+       "name": "TBA",
+       "airdate": "2026-12-13",
+       "airstamp": "2026-12-14T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
@@ -18208,7 +18216,7 @@
      "number": 7,
      "name": "",
      "premiere": "2026-09-16",
-     "end": "2026-12-09",
+     "end": "2026-12-16",
      "episode_order": null,
      "episodes": [
       {
@@ -18301,7 +18309,7 @@
       },
       {
        "number": 12,
-       "name": "TBA",
+       "name": "Lei Down the Law",
        "airdate": "2026-12-02",
        "airstamp": "2026-12-03T01:00:00+00:00",
        "airtime": "20:00",
@@ -18312,6 +18320,14 @@
        "name": "TBA",
        "airdate": "2026-12-09",
        "airstamp": "2026-12-10T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 14,
+       "name": "TBA",
+       "airdate": "2026-12-16",
+       "airstamp": "2026-12-17T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
