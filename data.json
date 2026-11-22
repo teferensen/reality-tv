@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T19:29:38+00:00",
+ "updated": "2026-11-22T19:51:24+00:00",
  "problems": [],
  "shows": [
   {
@@ -38571,12 +38571,28 @@
        "number": 10,
        "name": "A Shucking Good Time",
        "airdate": "2026-12-03",
-       "airstamp": "2026-12-04T01:00:00+00:00",
-       "airtime": "20:00",
+       "airstamp": "2026-12-04T01:30:00+00:00",
+       "airtime": "20:30",
        "type": "regular"
       },
       {
        "number": 11,
+       "name": "TBA",
+       "airdate": "2026-12-10",
+       "airstamp": "2026-12-11T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 12,
+       "name": "TBA",
+       "airdate": "2026-12-17",
+       "airstamp": "2026-12-18T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 13,
        "name": "TBA",
        "airdate": "2027-01-14",
        "airstamp": "2027-01-15T01:00:00+00:00",
@@ -38584,7 +38600,7 @@
        "type": "regular"
       },
       {
-       "number": 12,
+       "number": 14,
        "name": "TBA",
        "airdate": "2027-01-21",
        "airstamp": "2027-01-22T01:00:00+00:00",
@@ -38592,7 +38608,7 @@
        "type": "regular"
       },
       {
-       "number": 13,
+       "number": 15,
        "name": "TBA",
        "airdate": "2027-01-28",
        "airstamp": "2027-01-29T01:00:00+00:00",
@@ -38600,43 +38616,18 @@
        "type": "regular"
       },
       {
-       "number": 14,
+       "number": 16,
        "name": "TBA",
        "airdate": "2027-02-04",
-       "airstamp": "2027-02-05T01:00:00+00:00",
-       "airtime": "20:00",
+       "airstamp": "2027-02-05T02:00:00+00:00",
+       "airtime": "21:00",
        "type": "regular"
       },
       {
-       "number": 15,
+       "number": 17,
        "name": "TBA",
        "airdate": "2027-02-11",
        "airstamp": "2027-02-12T01:00:00+00:00",
-       "airtime": "20:00",
-       "type": "regular"
-      },
-      {
-       "number": 16,
-       "name": "TBA",
-       "airdate": "2027-02-11",
-       "airstamp": "2027-02-12T02:00:00+00:00",
-       "airtime": "21:00",
-       "type": "regular"
-      }
-     ]
-    },
-    {
-     "number": 26,
-     "name": "",
-     "premiere": null,
-     "end": null,
-     "episode_order": null,
-     "episodes": [
-      {
-       "number": 1,
-       "name": "TBA",
-       "airdate": null,
-       "airstamp": null,
        "airtime": "20:00",
        "type": "regular"
       }
@@ -41342,14 +41333,6 @@
        "type": "regular"
       }
      ]
-    },
-    {
-     "number": 17,
-     "name": "",
-     "premiere": null,
-     "end": null,
-     "episode_order": null,
-     "episodes": []
     }
    ]
   },
