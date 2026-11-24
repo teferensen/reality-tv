@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T00:03:47+00:00",
+ "updated": "2026-11-24T22:37:19+00:00",
  "problems": [],
  "shows": [
   {
@@ -5694,7 +5694,7 @@
       },
       {
        "number": 12,
-       "name": "TBA",
+       "name": "Echoes of the Past",
        "airdate": "2026-12-01",
        "airstamp": "2026-12-02T01:00:00+00:00",
        "airtime": "20:00",
@@ -38579,8 +38579,8 @@
        "number": 10,
        "name": "A Shucking Good Time",
        "airdate": "2026-12-03",
-       "airstamp": "2026-12-04T01:30:00+00:00",
-       "airtime": "20:30",
+       "airstamp": "2026-12-04T01:00:00+00:00",
+       "airtime": "20:00",
        "type": "regular"
       },
       {
