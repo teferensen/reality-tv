@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T19:51:24+00:00",
+ "updated": "2026-11-24T00:03:47+00:00",
  "problems": [],
  "shows": [
   {
@@ -30347,7 +30347,7 @@
      "number": 8,
      "name": "",
      "premiere": "2026-10-04",
-     "end": "2026-12-13",
+     "end": "2026-12-20",
      "episode_order": null,
      "episodes": [
       {
@@ -30408,7 +30408,7 @@
       },
       {
        "number": 8,
-       "name": "Episode 8",
+       "name": "The Parent Trapped",
        "airdate": "2026-11-22",
        "airstamp": "2026-11-23T01:00:00+00:00",
        "airtime": "20:00",
@@ -30435,6 +30435,14 @@
        "name": "Episode 11",
        "airdate": "2026-12-13",
        "airstamp": "2026-12-14T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 12,
+       "name": "Episode 12",
+       "airdate": "2026-12-20",
+       "airstamp": "2026-12-21T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
