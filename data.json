@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T22:37:19+00:00",
+ "updated": "2026-11-25T21:50:36+00:00",
  "problems": [],
  "shows": [
   {
@@ -18317,7 +18317,7 @@
       },
       {
        "number": 13,
-       "name": "TBA",
+       "name": "Hostess with the Roastest",
        "airdate": "2026-12-09",
        "airstamp": "2026-12-10T01:00:00+00:00",
        "airtime": "20:00",
@@ -20512,7 +20512,7 @@
      "number": 12,
      "name": "",
      "premiere": "2026-11-12",
-     "end": "2026-12-03",
+     "end": "2026-12-10",
      "episode_order": null,
      "episodes": [
       {
@@ -20541,9 +20541,17 @@
       },
       {
        "number": 4,
-       "name": "TBA",
+       "name": "A Historic Divide",
        "airdate": "2026-12-03",
        "airstamp": "2026-12-04T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 5,
+       "name": "TBA",
+       "airdate": "2026-12-10",
+       "airstamp": "2026-12-11T02:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       }
@@ -30416,7 +30424,7 @@
       },
       {
        "number": 9,
-       "name": "Episode 9",
+       "name": "Wanda's Vision",
        "airdate": "2026-11-29",
        "airstamp": "2026-11-30T01:00:00+00:00",
        "airtime": "20:00",
@@ -38640,6 +38648,14 @@
        "type": "regular"
       }
      ]
+    },
+    {
+     "number": 26,
+     "name": "",
+     "premiere": null,
+     "end": null,
+     "episode_order": null,
+     "episodes": []
     }
    ]
   },
@@ -41341,6 +41357,14 @@
        "type": "regular"
       }
      ]
+    },
+    {
+     "number": 17,
+     "name": "",
+     "premiere": null,
+     "end": null,
+     "episode_order": null,
+     "episodes": []
     }
    ]
   },
