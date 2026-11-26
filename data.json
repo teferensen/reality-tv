@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T21:50:36+00:00",
+ "updated": "2026-11-26T21:44:05+00:00",
  "problems": [],
  "shows": [
   {
@@ -5601,7 +5601,7 @@
      "number": 16,
      "name": "",
      "premiere": "2026-09-08",
-     "end": "2026-12-08",
+     "end": "2026-12-15",
      "episode_order": null,
      "episodes": [
       {
@@ -5702,9 +5702,17 @@
       },
       {
        "number": 13,
-       "name": "TBA",
+       "name": "Good Vibes Only",
        "airdate": "2026-12-08",
        "airstamp": "2026-12-09T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 14,
+       "name": "TBA",
+       "airdate": "2026-12-15",
+       "airstamp": "2026-12-16T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
@@ -16474,7 +16482,7 @@
      "number": 11,
      "name": "",
      "premiere": "2026-10-11",
-     "end": "2026-12-13",
+     "end": "2026-12-20",
      "episode_order": null,
      "episodes": [
       {
@@ -16551,9 +16559,17 @@
       },
       {
        "number": 10,
-       "name": "TBA",
+       "name": "Proud Mother",
        "airdate": "2026-12-13",
        "airstamp": "2026-12-14T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 11,
+       "name": "Glitch Please",
+       "airdate": "2026-12-20",
+       "airstamp": "2026-12-21T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
@@ -20512,7 +20528,7 @@
      "number": 12,
      "name": "",
      "premiere": "2026-11-12",
-     "end": "2026-12-10",
+     "end": "2026-12-17",
      "episode_order": null,
      "episodes": [
       {
@@ -20549,9 +20565,17 @@
       },
       {
        "number": 5,
-       "name": "TBA",
+       "name": "Ready, Aim, Blame",
        "airdate": "2026-12-10",
        "airstamp": "2026-12-11T02:00:00+00:00",
+       "airtime": "21:00",
+       "type": "regular"
+      },
+      {
+       "number": 6,
+       "name": "TBA",
+       "airdate": "2026-12-17",
+       "airstamp": "2026-12-18T02:00:00+00:00",
        "airtime": "21:00",
        "type": "regular"
       }
