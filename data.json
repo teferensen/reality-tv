@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T21:44:05+00:00",
+ "updated": "2026-11-27T21:29:20+00:00",
  "problems": [],
  "shows": [
   {
@@ -18232,7 +18232,7 @@
      "number": 7,
      "name": "",
      "premiere": "2026-09-16",
-     "end": "2026-12-16",
+     "end": "2026-12-23",
      "episode_order": null,
      "episodes": [
       {
@@ -18344,6 +18344,14 @@
        "name": "TBA",
        "airdate": "2026-12-16",
        "airstamp": "2026-12-17T01:00:00+00:00",
+       "airtime": "20:00",
+       "type": "regular"
+      },
+      {
+       "number": 15,
+       "name": "Your Energy Is Tragic, Tragic",
+       "airdate": "2026-12-23",
+       "airstamp": "2026-12-24T01:00:00+00:00",
        "airtime": "20:00",
        "type": "regular"
       }
@@ -38617,7 +38625,7 @@
       },
       {
        "number": 11,
-       "name": "TBA",
+       "name": "Peril on the Palate",
        "airdate": "2026-12-10",
        "airstamp": "2026-12-11T01:00:00+00:00",
        "airtime": "20:00",
